@@ -1,0 +1,67 @@
+Implement a simple single page app and a back end handling authentication for the app and providing some data.
+
+For the front end:
+
+When you first open the app, a login page should be shown with inputs for username and password and a button for login.
+
+On successful login, user should be redirected to the home page.
+
+On failed login an error message should appear above the login form.
+
+On the home page there should be a navigation section with 2 links and a content section.
+
+The two links should be 'Foo' and 'Bar'.
+
+Clicking any of the links should change the content of the page to the corresponding component for that module.
+
+The 'Foo' component should be a simple `<p>Foo</p>` paragraph
+
+The 'Bar' component should have a select field and a list of bars retrieved from the back end.
+
+The bars would look like { id: 1, name: 'Bar', rating: 4 } and the data should be stored in the component's state
+
+The list items should look like this: 'rating - Bar name'
+
+The select input should have values of 1 to 5 and on change should filter the
+
+bars to only the ones having rating equal or greater than the selected rating.
+
+Filtering should be done on the back end so on each change a new request needs
+
+to be made for the filtered data.
+
+For the back end:
+
+The back end should have the following routes:
+
+* /api/login
+
+* accepts 'POST' requests
+
+* body should contain username and password
+
+* authentication is done with Django authentication system
+
+* /api/bars
+
+* accepts 'GET', 'POST' requests
+
+* accepts 'rating' query parameter for filtering bars, returning only bars that have rating equal or greater than the parameter
+
+* returns a list of bars in the form of: { id: 1, name: 'Bar1', rating: 4 }
+
+* bars should have a model and be stored in a database
+
+* /api/bars/<id>
+
+* accepts 'GET', 'DELETE'
+
+* gets or deletes a single bar by id
+
+The bar model should have the following fields:
+
+* id - integer, PK
+
+* name - string
+
+* rating - integer from 1 to 5
