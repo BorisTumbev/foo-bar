@@ -1,4 +1,4 @@
-Implement a simple single page app and a back end handling authentication for the app and providing some data.
+﻿Implement a simple single page app and a back end handling authentication for the app and providing some data.
 
 For the front end:
 
@@ -65,3 +65,7 @@ The bar model should have the following fields:
 * name - string
 
 * rating - integer from 1 to 5
+
+check axios intereceptors
+redirect if not logged at one place
+expiring token

@@ -102,7 +102,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env-example
 .env
 .venv
 env/
@@ -131,3 +130,5 @@ dmypy.json
 
 .idea/
 
+foo_bar/foo_bar_api/migrations
+package-lock.json
