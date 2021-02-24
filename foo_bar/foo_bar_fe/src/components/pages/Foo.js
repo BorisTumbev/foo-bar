@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
-import PropTypes from "prop-types";
 import MainLayout from "../blocks/layouts/MainLayout";
 
 import { CardDeck, Card } from "react-bootstrap";
