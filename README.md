@@ -4,13 +4,30 @@
 
     git clone git@github.com:BorisTumbev/foo-bar.git
 
-## create virtual environment
+## create virtual environment and activate it
 
     virtualenv -p python3.8 venv
+    source venv/bin/activate
 
-## Run the tests
+## Install requirements
 
-    ./run-tests.sh
+    pip install -r requirements.txt
+
+## Create .env where .env-example is
+    cp .env-example .env
+
+## Generate secret key and put it in .env file
+    python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())' 
+
+## Make migrations
+    python manage.py makemigrations foo_bar_api
+    python manage.py migrate
+
+## Create user
+    python manage.py createsuperuser
+
+## Add dummy data
+    
 
 # REST API
 
